@@ -1044,7 +1044,7 @@ h4 {
   object-fit:contain;
   border-radius:5px
 }
-.screen-enlarge {
+.screen-enlarge, .screen-launch {
   position:relative;
   display:block
 }

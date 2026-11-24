@@ -323,92 +323,72 @@
       "note": "Five hand-authored illustrative sites; sample performance metrics; no DQS imports or persisted workspace. Captured from original UI in an isolated client-only harness. Visible OpenStreetMap attribution retained."
     },
     {
-      "file": "lantern-studio-en.webp",
-      "source": "Lantern Studio room editor with the Tideglass Observatory project",
-      "source_sha256": "ab9cb17835619630ab388015abf505a4c2288d1733a6435df60e1c486eb143d6",
+      "file": "lantern-editor-en.webp",
+      "source": "Hosted Lantern Studio, blank visual novel in the professional storyboard editor (en)",
+      "source_sha256": "20ccf6b911f2a57bd96c4f08f40d7f9205562037e8ed43c2b3b6587dc9c95b3a",
       "source_dimensions": [
-        1440,
-        900
+        1400,
+        790
       ],
-      "crop_ltrb": [
-        0,
-        0,
-        1440,
-        812
-      ],
+      "crop_ltrb": null,
       "dimensions": [
         1400,
         790
       ],
-      "source_bytes": 600233,
-      "bytes": 130202,
-      "sha256": "a5987d9c98b2690c90ef4c857915a5115a8eccfe152ad770cff56d91661cb065"
+      "source_bytes": 235096,
+      "bytes": 48690,
+      "sha256": "8a953be42727c90b103c3b12072522fca59fcb33d109a1bf13d4119a2a04313b"
     },
     {
-      "file": "lantern-studio-zh.webp",
-      "source": "Lantern Studio room editor with the Tideglass Observatory project",
-      "source_sha256": "19f8025ac001296449df9b14a910851f7d1c7a03523ca83a939f1ebb643efa98",
+      "file": "lantern-editor-zh.webp",
+      "source": "Hosted Lantern Studio, blank visual novel in the professional storyboard editor (zh)",
+      "source_sha256": "aa3cc97ea9a01f14e01b741375cef6c288f6d6094fe4921fbdf036c5b5dd0325",
       "source_dimensions": [
-        1440,
-        900
+        1400,
+        790
       ],
-      "crop_ltrb": [
-        0,
-        0,
-        1440,
-        812
-      ],
+      "crop_ltrb": null,
       "dimensions": [
         1400,
         790
       ],
-      "source_bytes": 596150,
-      "bytes": 125818,
-      "sha256": "8993304dc2b4bdbecc414ce7fa055d314f22953a0919491f323fc85e2bf91a56"
+      "source_bytes": 206491,
+      "bytes": 42296,
+      "sha256": "ab90772c47ae7ef4811222deb3a98a90fafb46cfc62eb2b856c5158ab76dd246"
     },
     {
-      "file": "tideglass-en.webp",
-      "source": "Tideglass Observatory standalone HTML game",
-      "source_sha256": "47891be889e8c07770abe959399302401c3aaa6691069f2cb2e632a3ef64d5d1",
+      "file": "lantern-writing-en.webp",
+      "source": "Hosted Lantern Studio, beginner two-ending writing form (en)",
+      "source_sha256": "e7078548afa26088086eb10980beb7fe123efb6999bec5bafe8b554b80b0c8c8",
       "source_dimensions": [
         1400,
         790
       ],
-      "crop_ltrb": [
-        0,
-        0,
-        1400,
-        650
-      ],
+      "crop_ltrb": null,
       "dimensions": [
         1400,
-        650
+        790
       ],
-      "source_bytes": 834086,
-      "bytes": 133380,
-      "sha256": "b60fbe2eae3c53004054a6d4fbdadb9b343ce2c772c5eb345661795a43f38d73"
+      "source_bytes": 305837,
+      "bytes": 39636,
+      "sha256": "8676464ee1f105229f18feb3a5b713b927b6f2a2c0fbc1f72425d9f804eb9a94"
     },
     {
-      "file": "tideglass-zh.webp",
-      "source": "Tideglass Observatory standalone HTML game",
-      "source_sha256": "0f47a562728b226dce3c02b929cd9792497986bfb6621bc5dcc1d563c9e75c66",
+      "file": "lantern-writing-zh.webp",
+      "source": "Hosted Lantern Studio, beginner two-ending writing form (zh)",
+      "source_sha256": "d558511e704b595fe51f6983389363991df5174e42b5df0fcaa2f7809748c9bb",
       "source_dimensions": [
         1400,
         790
       ],
-      "crop_ltrb": [
-        0,
-        0,
-        1400,
-        650
-      ],
+      "crop_ltrb": null,
       "dimensions": [
         1400,
-        650
+        790
       ],
-      "source_bytes": 828714,
-      "bytes": 125544,
-      "sha256": "8d5abd83ee1ed47cd541255084368dfb0257521ff333799866b393caa6bd35c4"
+      "source_bytes": 266656,
+      "bytes": 37290,
+      "sha256": "2568abe5d50c3df37c2f2e1dcd3bd011e7a1160477fdaac5d9602b25346a56b5"
     }
   ]
 }
