@@ -42,4 +42,6 @@ Optimized copies of authentic application screenshots for the October 2026 portf
 | tap-quiz.webp | 720 x 1600 | 41,478 | Tap to Learn approved store screenshots / `1000038728.jpg` |
 | siteselection-demo.webp | 1400 x 875 | 68,722 | Site Atlas isolated client-only illustrative preview / `siteselection-preview.jpg` |
 
-Total: 1,076,412 bytes of WebP images from 7,903,704 bytes of source images, a 86.4% reduction.
+The October 2026 set totals 1,076,412 bytes of WebP images from 7,903,704 bytes of source images, a 86.4% reduction.
+
+The Lantern Studio covers show the actual room editor with the tide ledger selected in an isolated English or Chinese session. The Tideglass Observatory gallery images show the opening screen of the corresponding standalone game in `play/tideglass-observatory/`. The bottom crop keeps the scene and interactive object list in view. Capture dimensions and hashes are recorded in `sources.json`. The observatory illustration was created with OpenAI ImageGen for this game, as credited in each player.

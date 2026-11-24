@@ -23,7 +23,8 @@ function header(lang, slug) {
 }
 
 function actionLink(action, lang, className = "button button-primary") {
-  return `<a class="${className}" href="${h(action.url)}" ${external(action.url) ? 'target="_blank" rel="noopener noreferrer"' : ""}>${h(action[lang])}${arrow}</a>`;
+  const url = typeof action.url === "string" ? action.url : action.url[lang];
+  return `<a class="${className}" href="${h(url)}" ${external(url) ? 'target="_blank" rel="noopener noreferrer"' : ""}>${h(action[lang])}${arrow}</a>`;
 }
 
 function media(project, lang, context = "card") {
@@ -82,7 +83,9 @@ function home(lang) {
 }
 
 function gallery(project, lang) {
-  const entries = visuals[project.slug]?.gallery ?? [];
+  const entries = (visuals[project.slug]?.gallery ?? []).map(entry => ({
+    ...entry, src: typeof entry.src === "string" ? entry.src : entry.src[lang],
+  }));
   if (!entries.length) return "";
   const p = presentation[lang];
   return `<section class="gallery-section"><div class="gallery-heading"><p class="eyebrow">${h(p.closerLook)}</p><h2>${h(p.insideProduct)}</h2></div><div class="project-gallery${project.media === "phone" ? " gallery-phones" : ""}">${entries.map((entry, i) => `<figure><a href="${h(entry.src)}" data-lightbox data-caption="${h(entry.caption[lang])}" aria-label="${h(p.enlarge)}: ${h(entry.caption[lang])}"><img src="${h(entry.src)}" alt="${h(entry.alt?.[lang] ?? entry.caption[lang])}" loading="lazy" decoding="async" width="${entry.width}" height="${entry.height}"><span class="gallery-expand">${arrow}</span></a><figcaption><span>0${i + 1}</span>${h(entry.caption[lang])}</figcaption></figure>`).join("")}</div></section>`;
@@ -99,6 +102,7 @@ function detail(project, lang) {
 await fs.rm(outputRoot, { recursive: true, force: true });
 await fs.mkdir(outputRoot, { recursive: true });
 await fs.cp(path.join(sourceRoot, "assets"), path.join(outputRoot, "assets"), { recursive: true });
+await fs.cp(path.join(sourceRoot, "play"), path.join(outputRoot, "play"), { recursive: true });
 await fs.writeFile(path.join(outputRoot, ".nojekyll"), "");
 for (const lang of ["en", "zh"]) {
   const languageRoot = path.join(outputRoot, lang === "zh" ? "zh" : "");

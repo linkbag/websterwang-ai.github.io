@@ -321,6 +321,94 @@
       "quality": 82,
       "method": 6,
       "note": "Five hand-authored illustrative sites; sample performance metrics; no DQS imports or persisted workspace. Captured from original UI in an isolated client-only harness. Visible OpenStreetMap attribution retained."
+    },
+    {
+      "file": "lantern-studio-en.webp",
+      "source": "Lantern Studio room editor with the Tideglass Observatory project",
+      "source_sha256": "ab9cb17835619630ab388015abf505a4c2288d1733a6435df60e1c486eb143d6",
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        1440,
+        812
+      ],
+      "dimensions": [
+        1400,
+        790
+      ],
+      "source_bytes": 600233,
+      "bytes": 130202,
+      "sha256": "a5987d9c98b2690c90ef4c857915a5115a8eccfe152ad770cff56d91661cb065"
+    },
+    {
+      "file": "lantern-studio-zh.webp",
+      "source": "Lantern Studio room editor with the Tideglass Observatory project",
+      "source_sha256": "19f8025ac001296449df9b14a910851f7d1c7a03523ca83a939f1ebb643efa98",
+      "source_dimensions": [
+        1440,
+        900
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        1440,
+        812
+      ],
+      "dimensions": [
+        1400,
+        790
+      ],
+      "source_bytes": 596150,
+      "bytes": 125818,
+      "sha256": "8993304dc2b4bdbecc414ce7fa055d314f22953a0919491f323fc85e2bf91a56"
+    },
+    {
+      "file": "tideglass-en.webp",
+      "source": "Tideglass Observatory standalone HTML game",
+      "source_sha256": "47891be889e8c07770abe959399302401c3aaa6691069f2cb2e632a3ef64d5d1",
+      "source_dimensions": [
+        1400,
+        790
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        1400,
+        650
+      ],
+      "dimensions": [
+        1400,
+        650
+      ],
+      "source_bytes": 834086,
+      "bytes": 133380,
+      "sha256": "b60fbe2eae3c53004054a6d4fbdadb9b343ce2c772c5eb345661795a43f38d73"
+    },
+    {
+      "file": "tideglass-zh.webp",
+      "source": "Tideglass Observatory standalone HTML game",
+      "source_sha256": "0f47a562728b226dce3c02b929cd9792497986bfb6621bc5dcc1d563c9e75c66",
+      "source_dimensions": [
+        1400,
+        790
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        1400,
+        650
+      ],
+      "dimensions": [
+        1400,
+        650
+      ],
+      "source_bytes": 828714,
+      "bytes": 125544,
+      "sha256": "8d5abd83ee1ed47cd541255084368dfb0257521ff333799866b393caa6bd35c4"
     }
   ]
 }
