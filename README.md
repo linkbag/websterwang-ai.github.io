@@ -18,6 +18,8 @@ node src/build.mjs
 
 The build writes the publishable site to `docs/`. Commit the updated source and `docs/` together. There are no npm dependencies.
 
+Lantern Studio runs at `/lantern-studio/`. To update it, replace the contents of the top-level `lantern-studio/` directory with Lantern’s production `dist/` from `npm run build`, then run the portfolio build above. Keep the bundled licenses, fonts, sample projects and optional provider downloads together. The editor runs on GitHub Pages without a server or shared API credentials. The English and Chinese portfolio links set the initial interface language for first-time visitors.
+
 ## Preview
 
 Serve the `docs` folder at the origin root. For example:

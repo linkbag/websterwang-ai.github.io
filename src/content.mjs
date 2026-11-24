@@ -758,15 +758,21 @@ export const site = {
       color: "violet",
       media: "screen",
       image: { en: "/assets/showcase/lantern-studio-en.webp", zh: "/assets/showcase/lantern-studio-zh.webp" },
-      status: { en: "PLAYABLE DEMO", zh: "可在线试玩" },
+      status: { en: "LIVE STUDIO", zh: "在线工作室" },
       metric: { en: "Indie game development tool", zh: "独立游戏开发工具" },
       tags: { en: ["Visual authoring", "English & Chinese", "Browser games"], zh: ["可视化创作", "中英双语", "网页游戏"] },
       actions: [
         {
+          en: "Open Lantern Studio",
+          zh: "打开灯笼工作室",
+          url: { en: "/lantern-studio/?lang=en", zh: "/lantern-studio/?lang=zh" },
+          primary: true,
+          showOnCard: true,
+        },
+        {
           en: "Play in English",
           zh: "中文试玩",
           url: { en: "/play/tideglass-observatory/en.html", zh: "/play/tideglass-observatory/zh.html" },
-          primary: true,
         },
         {
           en: "Play in Chinese",
@@ -776,9 +782,9 @@ export const site = {
       ],
       en: {
         title: "Lantern Studio",
-        line: "Build a small game one scene at a time. Try the studio’s bilingual mystery, Tideglass Observatory.",
+        line: "Make a visual novel, a puzzle or a small RPG in your browser.",
         summary:
-          "Lantern Studio helps independent creators turn a scene, a puzzle or a few lines of dialogue into a game. Try Tideglass Observatory, a short point-and-click mystery made in the studio. A ferry is waiting offshore. Will you signal it through the fog?",
+          "Choose a game format, edit your first scene and playtest it as you go. Your project saves in this browser. Download a backup to keep editing elsewhere, or export an HTML game to share. For a finished example, try Tideglass Observatory, a bilingual mystery made in the studio.",
         purpose:
           "The idea grew out of a conversation at an indie game meetup in China. I wanted someone with a story in mind to be able to build the first playable scene in their own language, even if they had never written code.",
         highlights: [
@@ -787,14 +793,14 @@ export const site = {
           "Edit project data and web code for finer control, then export a standalone HTML game that plays offline.",
         ],
         involvement:
-          "Open the demo and look for your sister’s tide ledger. There are four objects to investigate and two possible endings. You can play with a mouse, touch or keyboard.",
+          "Open the studio and choose “Make your first game” to follow the beginner guide. You can create and export a game without an account. To try a finished game first, explore the four clues and two endings in Tideglass Observatory.",
         alt: "Lantern Studio’s room editor with the tide ledger selected on a map and its English and Chinese text fields alongside",
       },
       zh: {
         title: "灯笼工作室 · Lantern Studio",
-        line: "用中文或英文做个小游戏。先来试玩解谜短篇《潮镜天文台》。",
+        line: "在浏览器里做一部视觉小说、一款解谜游戏，或一段角色扮演冒险。",
         summary:
-          "灯笼工作室让独立创作者把一个场景、一道谜题或几句对白做成能玩的游戏。《潮镜天文台》是用它制作的点击解谜短篇。一艘渡船正在港外等候。雾还没散，你会亮灯为它引航吗？",
+          "选一种游戏形式，编辑第一个场景，随时点开试玩。工程会保存在当前浏览器里，也可以下载备份换台电脑接着做，或导出成 HTML 游戏分享给朋友。想先看看成品，可以试玩用工作室制作的双语解谜短篇《潮镜天文台》。",
         purpose:
           "这个想法来自一次国内独立游戏聚会。我希望有故事想讲的人，即使从没写过代码，也能用自己熟悉的语言，亲手做出第一个能玩的场景。",
         highlights: [
@@ -802,7 +808,7 @@ export const site = {
           "同一套玩法可以分别填写中英文文案。无论玩家选择哪种语言，找到线索后都能触发相同的下一步。",
           "熟悉开发后可以细改工程数据和网页代码，再把游戏导出成离线可玩的独立 HTML 文件。",
         ],
-        involvement: "进天文台找找妹妹的潮汐手记。房间里有四件物品可以调查，故事有两个结局。用鼠标、触屏或键盘都能玩。",
+        involvement: "打开工作室，跟着「做出你的第一款游戏」开始创作。无需注册就可以制作、试玩和导出游戏。也可以先进《潮镜天文台》，调查四件物品，寻找两个不同的结局。",
         alt: "灯笼工作室房间编辑器，场景中的潮汐手记已被选中，右侧可以编辑其中英文名称和调查动作",
       },
     },

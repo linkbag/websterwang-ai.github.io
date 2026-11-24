@@ -50,7 +50,15 @@ function videoNotes(project, lang) {
 
 function card(project, lang) {
   const ui = site.ui[lang], copy = project[lang];
-  return `<article class="project-card accent-${project.color}${project.media === "abstract" ? " is-upcoming" : ""}" data-project-number="${number(project)}"><a class="project-card-link" href="${localizedPath(lang, project.slug)}" aria-label="${h(ui.viewProject)}: ${h(copy.title)}">${media(project, lang)}<div class="card-body"><div class="card-meta"><span>${h(project.status[lang])}</span><span>${number(project)} / ${total}</span></div><div class="card-title-row"><h4>${h(copy.title)}</h4><span class="card-arrow">${arrow}</span></div><p class="card-line">${h(copy.line)}</p><div class="card-foot"><span>${h(project.metric[lang])}</span><span>${h(ui.viewProject)} <span aria-hidden="true">→</span></span></div></div></a></article>`;
+  const launch = project.actions.find(action => action.showOnCard);
+  const details = `href="${localizedPath(lang, project.slug)}" aria-label="${h(ui.viewProject)}: ${h(copy.title)}"`;
+  const tag = launch ? "div" : "a";
+  const image = media(project, lang);
+  const visual = launch ? `<a ${details}>${image}</a>` : image;
+  const view = `${h(ui.viewProject)} <span aria-hidden="true">→</span>`;
+  const viewLink = launch ? `<a class="card-case-link" ${details}>${view}</a>` : `<span>${view}</span>`;
+  const launchButton = launch ? `<div class="card-launch">${actionLink(launch, lang)}</div>` : "";
+  return `<article class="project-card accent-${project.color}${project.media === "abstract" ? " is-upcoming" : ""}" data-project-number="${number(project)}"><${tag} class="project-card-link"${launch ? "" : " " + details}>${visual}<div class="card-body"><div class="card-meta"><span>${h(project.status[lang])}</span><span>${number(project)} / ${total}</span></div><div class="card-title-row"><h4>${h(copy.title)}</h4>${launch ? "" : `<span class="card-arrow">${arrow}</span>`}</div><p class="card-line">${h(copy.line)}</p>${launchButton}<div class="card-foot"><span>${h(project.metric[lang])}</span>${viewLink}</div></div></${tag}></article>`;
 }
 
 function heroShowcase(lang) {
@@ -103,6 +111,7 @@ await fs.rm(outputRoot, { recursive: true, force: true });
 await fs.mkdir(outputRoot, { recursive: true });
 await fs.cp(path.join(sourceRoot, "assets"), path.join(outputRoot, "assets"), { recursive: true });
 await fs.cp(path.join(sourceRoot, "play"), path.join(outputRoot, "play"), { recursive: true });
+await fs.cp(path.join(sourceRoot, "lantern-studio"), path.join(outputRoot, "lantern-studio"), { recursive: true });
 await fs.writeFile(path.join(outputRoot, ".nojekyll"), "");
 for (const lang of ["en", "zh"]) {
   const languageRoot = path.join(outputRoot, lang === "zh" ? "zh" : "");
@@ -116,6 +125,6 @@ for (const lang of ["en", "zh"]) {
 }
 await fs.writeFile(path.join(outputRoot, "404.html"), home("en"), "utf8");
 await fs.writeFile(path.join(outputRoot, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`);
-const paths = ["/", "/zh/", ...orderedProjects.flatMap((project) => [localizedPath("en", project.slug), localizedPath("zh", project.slug)])];
+const paths = ["/", "/zh/", "/lantern-studio/", ...orderedProjects.flatMap((project) => [localizedPath("en", project.slug), localizedPath("zh", project.slug)])];
 await fs.writeFile(path.join(outputRoot, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((pathname) => `<url><loc>${site.url}${pathname}</loc></url>`).join("")}</urlset>`);
 console.log(`Built ${paths.length} pages in ${outputRoot}`);
