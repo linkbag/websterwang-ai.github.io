@@ -42,6 +42,16 @@ const shot = (name, en, zh) => ({
 });
 
 export const visuals = {
+  "indie-games": {
+    gallery: [{
+      src: { en: image("tideglass-en"), zh: image("tideglass-zh") },
+      width: 1400, height: 650,
+      caption: {
+        en: "The finished room. Click a numbered object in the observatory or choose its name beside the illustration.",
+        zh: "玩家眼中的天文台。可以点击画面上带编号的物品，也可以从图旁的列表选择它。",
+      },
+    }],
+  },
   aperture: {
     cover: bilingual(image("aperture-timeline")),
     gallery: [
