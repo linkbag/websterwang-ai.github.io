@@ -722,6 +722,13 @@ h4 {
 .card-foot>span:first-child {
   color:var(--muted)
 }
+.card-launch {
+  margin-bottom:18px
+}
+.card-case-link {
+  text-decoration:underline;
+  text-underline-offset:3px
+}
 .project-grid-single {
   grid-template-columns:1fr
 }

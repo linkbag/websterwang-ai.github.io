@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; form-action 'none'; base-uri 'none'">
+  <title>Lantern Studio · Provider sign-in</title>
+  <style>body{color:#22252b;background:#faf9f7;font:1rem/1.55 system-ui;margin:clamp(2rem,10vw,5rem) auto;padding:0 1.5rem;max-width:32rem}h1{font-size:1.6rem}</style>
+</head>
+<body>
+  <h1>Lantern Studio</h1>
+  <p id="status" role="status">Return to the Studio tab that opened this window. 请返回发起登录的工作室标签页。</p>
+  <script>
+    (() => {
+      const params = new URLSearchParams(location.search);
+      history.replaceState(null, "", location.pathname);
+      const attempt = params.get("attempt");
+      if (!/^[A-Za-z0-9_-]{43}$/.test(attempt || "") || typeof BroadcastChannel === "undefined") return;
+      const channel = new BroadcastChannel("lantern-provider-" + attempt);
+      const code = params.get("code");
+      const matched = params.get("state") === attempt;
+      if (code && !matched) { channel.close(); return; }
+      channel.postMessage({ type: "lantern-openrouter-return", state: attempt, code: matched ? code : null });
+      channel.close();
+    })();
+  </script>
+</body>
+</html>

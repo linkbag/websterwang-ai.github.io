@@ -1,0 +1,3 @@
+# Keep the distributed web build and downloadable archives byte-identical.
+lantern-studio/** -text -whitespace linguist-generated=true
+docs/lantern-studio/** -text -whitespace linguist-generated=true
