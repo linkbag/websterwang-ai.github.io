@@ -44,11 +44,11 @@ const shot = (name, en, zh) => ({
 export const visuals = {
   "indie-games": {
     gallery: [{
-      src: { en: image("tideglass-en"), zh: image("tideglass-zh") },
-      width: 1400, height: 650,
+      src: { en: image("lantern-writing-en"), zh: image("lantern-writing-zh") },
+      width: 1400, height: 790,
       caption: {
-        en: "The finished room. Click a numbered object in the observatory or choose its name beside the illustration.",
-        zh: "玩家眼中的天文台。可以点击画面上带编号的物品，也可以从图旁的列表选择它。",
+        en: "The beginner writing tool gives you a field for each choice and a space to write what happens next.",
+        zh: "在新手写作工具里填入两个选项，再分别写下玩家做出选择后的结局。",
       },
     }],
   },

@@ -44,4 +44,4 @@ Optimized copies of authentic application screenshots for the October 2026 portf
 
 The October 2026 set totals 1,076,412 bytes of WebP images from 7,903,704 bytes of source images, a 86.4% reduction.
 
-The Lantern Studio covers show the actual room editor with the tide ledger selected in an isolated English or Chinese session. The Tideglass Observatory gallery images show the opening screen of the corresponding standalone game in `play/tideglass-observatory/`. The bottom crop keeps the scene and interactive object list in view. Capture dimensions and hashes are recorded in `sources.json`. The observatory illustration was created with OpenAI ImageGen for this game, as credited in each player.
+The Lantern Studio covers show the professional storyboard editor after opening a blank visual novel. The gallery shows the beginner writing form for a choice and two endings. Each screenshot was taken in a fresh English or Chinese session in the hosted editor at a 1400 × 790 viewport. The uncropped WebP exports and source hashes are recorded in `sources.json`.

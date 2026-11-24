@@ -133,8 +133,8 @@ export const site = {
       id: "next",
       en: "More to come",
       zh: "敬请期待",
-      noteEn: "New work to try",
-      noteZh: "新作试玩",
+      noteEn: "Tools you can try",
+      noteZh: "可以在线使用的工具",
     },
   ],
   projects: [
@@ -757,8 +757,8 @@ export const site = {
       index: "11",
       color: "violet",
       media: "screen",
-      image: { en: "/assets/showcase/lantern-studio-en.webp", zh: "/assets/showcase/lantern-studio-zh.webp" },
-      status: { en: "LIVE STUDIO", zh: "在线工作室" },
+      image: { en: "/assets/showcase/lantern-editor-en.webp", zh: "/assets/showcase/lantern-editor-zh.webp" },
+      status: { en: "BROWSER EDITOR", zh: "在线编辑器" },
       metric: { en: "Indie game development tool", zh: "独立游戏开发工具" },
       tags: { en: ["Visual authoring", "English & Chinese", "Browser games"], zh: ["可视化创作", "中英双语", "网页游戏"] },
       actions: [
@@ -769,47 +769,37 @@ export const site = {
           primary: true,
           showOnCard: true,
         },
-        {
-          en: "Play in English",
-          zh: "中文试玩",
-          url: { en: "/play/tideglass-observatory/en.html", zh: "/play/tideglass-observatory/zh.html" },
-        },
-        {
-          en: "Play in Chinese",
-          zh: "英文试玩",
-          url: { en: "/play/tideglass-observatory/zh.html", zh: "/play/tideglass-observatory/en.html" },
-        },
       ],
       en: {
         title: "Lantern Studio",
-        line: "Make a visual novel, a puzzle or a small RPG in your browser.",
+        line: "A browser-based game editor for creating visual novels, puzzles and small RPGs.",
         summary:
-          "Choose a game format, edit your first scene and playtest it as you go. Your project saves in this browser. Download a backup to keep editing elsewhere, or export an HTML game to share. For a finished example, try Tideglass Observatory, a bilingual mystery made in the studio.",
+          "Choose from eight game formats and build your first scene in English or Chinese. Write dialogue, design choices and playtest as you work. The editor saves your project in this browser. Download an editable backup to continue on another computer, or export a game to share.",
         purpose:
           "The idea grew out of a conversation at an indie game meetup in China. I wanted someone with a story in mind to be able to build the first playable scene in their own language, even if they had never written code.",
         highlights: [
-          "Place an object, write what happens when a player touches it, and play the scene to see how it feels.",
-          "Use the same game logic for both languages. A clue discovered in English unlocks the same action in the Chinese edition.",
-          "Edit project data and web code for finer control, then export a standalone HTML game that plays offline.",
+          "The beginner workspace guides you through writing a decision and two endings. Test both paths before you share.",
+          "Build a branching story, lay out a map or place clues in a room. Give each project its own art, sound and bilingual text.",
+          "Switch to the professional workspace to edit source data, inspect build checks and export a standalone HTML game that plays offline.",
         ],
         involvement:
-          "Open the studio and choose “Create a two-ending game” to write a choice and its consequences. You can create and export a game without an account. To try a finished game first, explore the four clues and two endings in Tideglass Observatory.",
-        alt: "Lantern Studio’s room editor with the tide ledger selected on a map and its English and Chinese text fields alongside",
+          "Open Lantern Studio and choose “Create a two-ending game” to write your first decision. If you have a different idea in mind, choose “Explore game formats” and start a blank project. You can create, test and export without an account.",
+        alt: "Lantern Studio’s English storyboard editor for an untitled project, showing the scene outline, dialogue and editing tools",
       },
       zh: {
         title: "灯笼工作室 · Lantern Studio",
-        line: "在浏览器里做一部视觉小说、一款解谜游戏，或一段角色扮演冒险。",
+        line: "一款在浏览器里创作视觉小说、解谜游戏和小型角色扮演游戏的编辑器。",
         summary:
-          "选一种游戏形式，编辑第一个场景，随时点开试玩。工程会保存在当前浏览器里，也可以下载备份换台电脑接着做，或导出成 HTML 游戏分享给朋友。想先看看成品，可以试玩用工作室制作的双语解谜短篇《潮镜天文台》。",
+          "从八种游戏类型中选择一种，用中文或英文搭建第一个场景。你可以写对白、设计选项，随时试玩刚改好的内容。工程会保存在当前浏览器里，也可以下载备份，换台电脑接着做，或把做好的游戏导出分享。",
         purpose:
           "这个想法来自一次国内独立游戏聚会。我希望有故事想讲的人，即使从没写过代码，也能用自己熟悉的语言，亲手做出第一个能玩的场景。",
         highlights: [
-          "在场景里放一件物品，写下玩家点击后的反应，马上试玩，看看线索够不够清楚。",
-          "同一套玩法可以分别填写中英文文案。无论玩家选择哪种语言，找到线索后都能触发相同的下一步。",
-          "熟悉开发后可以细改工程数据和网页代码，再把游戏导出成离线可玩的独立 HTML 文件。",
+          "新手模式会引导你写下一个决定和两个不同的结局。分享前，可以亲自走一遍每条路线。",
+          "编排分支剧情、绘制探索地图，或在房间中布置线索，再为工程配上图像、声音和中英双语文案。",
+          "切换到专业模式，可直接修改工程源码、查看构建检查，并导出能离线运行的独立 HTML 游戏。",
         ],
-        involvement: "打开工作室，点击「制作双结局游戏」，写下玩家的第一个选择和两种结果。无需注册就可以制作、试玩和导出游戏。也可以先进《潮镜天文台》，调查四件物品，寻找两个不同的结局。",
-        alt: "灯笼工作室房间编辑器，场景中的潮汐手记已被选中，右侧可以编辑其中英文名称和调查动作",
+        involvement: "打开灯笼工作室，点击「制作双结局游戏」，写下玩家面临的第一个决定。想做别的类型，可以点击「探索游戏类型」，从空白工程开始。制作、试玩和导出都无需注册。",
+        alt: "灯笼工作室中文版分镜编辑器，显示未命名工程的场景列表、对白和编辑工具",
       },
     },
   ],

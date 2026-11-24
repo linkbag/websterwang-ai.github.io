@@ -2,7 +2,7 @@
 
 Rain falls outside an empty opera house. A brass hook waits in the cloakroom. There is a message on the bar floor, if you can find enough light to read it.
 
-Open **en.html** or **zh.html** to play. Use the Inventory button to examine the cloak and Back to revisit a decision. In Lantern Studio, click the project name and choose **Open The Velvet Cloak** to edit the story. The file **project.lantern.json** contains both languages, all artwork, ambience, item descriptions, credits and branching rules.
+In Lantern Studio, click the project name and choose **Open The Velvet Cloak** to edit this teaching project. Choose **Playtest** to try a change. You can also import **project.lantern.json** into the editor. It contains both languages, artwork, ambience, item descriptions, credits and branching rules.
 
 The game was authored from a blank project through Lantern Studio’s visible controls. Its original bilingual text and adaptation are released under the project’s MIT license. The underlying puzzle is Roger Firth’s *Cloak of Darkness*. The directly played reference was Manonamora’s free, choice-based Moiki adaptation. [Original benchmark](https://mipmip.org/IFrescue/rf/) · [Author’s reference and playable ports](https://manonamora.itch.io/cloak-of-darkness)
 

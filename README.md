@@ -18,7 +18,11 @@ node src/build.mjs
 
 The build writes the publishable site to `docs/`. Commit the updated source and `docs/` together. There are no npm dependencies.
 
-Lantern Studio runs at `/lantern-studio/`. To update it, replace the contents of the top-level `lantern-studio/` directory with Lantern’s production `dist/` from `npm run build`, then run the portfolio build above. Keep the bundled licenses, fonts, sample projects and optional provider downloads together. The editor runs on GitHub Pages without a server or shared API credentials. The English and Chinese portfolio links set the initial interface language for first-time visitors.
+Lantern Studio runs at `/lantern-studio/`. The English and Chinese portfolio links open the editor and set the interface language for first-time visitors. The editor runs on GitHub Pages without a server or shared API credentials.
+
+To update Studio, copy the runtime from Lantern’s production `dist/` into the top-level `lantern-studio/` directory. Include the editor entry point `index.html`, the sign-in callback `lantern-connect.html`, application assets, licenses, editable teaching projects and optional provider downloads. Keep standalone game exports in the Studio release’s test fixtures. The site build allows only the two application HTML entry points and generates redirects for former player bookmarks.
+
+Run `node src/build.mjs` and then `node --test tests/lantern-publication.test.mjs` before publishing a new Studio build.
 
 ## Preview
 

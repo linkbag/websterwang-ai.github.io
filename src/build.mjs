@@ -11,6 +11,7 @@ const h = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({"&":"&a
 const localizedPath = (lang, slug) => `${lang === "zh" ? "/zh" : ""}${slug ? `/projects/${slug}` : ""}/`;
 const categoryName = (id, lang) => site.categories.find((item) => item.id === id)?.[lang] ?? id;
 const external = (url) => /^https?:/.test(url);
+const actionUrl = (action, lang) => typeof action.url === "string" ? action.url : action.url[lang];
 const orderedProjects = site.categories.flatMap((category) => site.projects.filter((project) => project.category === category.id));
 const number = (project) => String(orderedProjects.indexOf(project) + 1).padStart(2, "0");
 const total = String(orderedProjects.length).padStart(2, "0");
@@ -23,7 +24,7 @@ function header(lang, slug) {
 }
 
 function actionLink(action, lang, className = "button button-primary") {
-  const url = typeof action.url === "string" ? action.url : action.url[lang];
+  const url = actionUrl(action, lang);
   return `<a class="${className}" href="${h(url)}" ${external(url) ? 'target="_blank" rel="noopener noreferrer"' : ""}>${h(action[lang])}${arrow}</a>`;
 }
 
@@ -38,7 +39,13 @@ function media(project, lang, context = "card") {
   if (project.media === "phone") return `<div class="${cls}"><div class="phone-stage"><img class="phone-back" src="${h(visuals[project.slug]?.secondary ?? project.imageSecondary)}" alt="" loading="lazy" decoding="async" width="720" height="1600"><img class="phone-front" src="${h(cover(project, lang))}" alt="${h(copy.alt)}" loading="lazy" decoding="async" width="720" height="1600"></div></div>`;
   const img = `<img src="${h(cover(project, lang))}" alt="${h(copy.alt)}" loading="${context === "detail" ? "eager" : "lazy"}" decoding="async" width="1400" height="790">`;
   const label = lang === "en" ? "Enlarge screenshot" : "放大截图";
-  const content = context === "detail" ? `<a class="screen-enlarge" href="${h(cover(project, lang))}" data-lightbox data-caption="${h(copy.title)}" aria-label="${h(label)}: ${h(copy.title)}">${img}<span class="enlarge-label">${h(label)} ${arrow}</span></a>` : img;
+  let content = img;
+  if (context === "detail") {
+    const launch = project.actions.find(action => action.showOnCard);
+    content = launch
+      ? `<a class="screen-launch" href="${h(actionUrl(launch, lang))}" aria-label="${h(launch[lang])}">${img}<span class="enlarge-label">${h(launch[lang])} ${arrow}</span></a>`
+      : `<a class="screen-enlarge" href="${h(cover(project, lang))}" data-lightbox data-caption="${h(copy.title)}" aria-label="${h(label)}: ${h(copy.title)}">${img}<span class="enlarge-label">${h(label)} ${arrow}</span></a>`;
+  }
   return `<div class="${cls}">${content}${context === "card" && project.video ? `<span class="video-badge"><span aria-hidden="true">▶</span> ${lang === "en" ? "Film" : "短片"} / ${h(project.video.duration)}</span>` : ""}</div>`;
 }
 
@@ -51,14 +58,17 @@ function videoNotes(project, lang) {
 function card(project, lang) {
   const ui = site.ui[lang], copy = project[lang];
   const launch = project.actions.find(action => action.showOnCard);
-  const details = `href="${localizedPath(lang, project.slug)}" aria-label="${h(ui.viewProject)}: ${h(copy.title)}"`;
+  const detailsLabel = launch ? (lang === "zh" ? "工作室介绍" : "About the studio") : ui.viewProject;
+  const details = `href="${localizedPath(lang, project.slug)}" aria-label="${h(detailsLabel)}: ${h(copy.title)}"`;
   const tag = launch ? "div" : "a";
   const image = media(project, lang);
-  const visual = launch ? `<a ${details}>${image}</a>` : image;
-  const view = `${h(ui.viewProject)} <span aria-hidden="true">→</span>`;
+  const launchHref = launch && h(actionUrl(launch, lang));
+  const visual = launch ? `<a href="${launchHref}" aria-label="${h(lang === "zh" ? "进入游戏编辑器" : "Enter the game editor")}">${image}</a>` : image;
+  const title = launch ? `<a href="${launchHref}">${h(copy.title)}</a>` : h(copy.title);
+  const view = `${h(detailsLabel)} <span aria-hidden="true">→</span>`;
   const viewLink = launch ? `<a class="card-case-link" ${details}>${view}</a>` : `<span>${view}</span>`;
   const launchButton = launch ? `<div class="card-launch">${actionLink(launch, lang)}</div>` : "";
-  return `<article class="project-card accent-${project.color}${project.media === "abstract" ? " is-upcoming" : ""}" data-project-number="${number(project)}"><${tag} class="project-card-link"${launch ? "" : " " + details}>${visual}<div class="card-body"><div class="card-meta"><span>${h(project.status[lang])}</span><span>${number(project)} / ${total}</span></div><div class="card-title-row"><h4>${h(copy.title)}</h4>${launch ? "" : `<span class="card-arrow">${arrow}</span>`}</div><p class="card-line">${h(copy.line)}</p>${launchButton}<div class="card-foot"><span>${h(project.metric[lang])}</span>${viewLink}</div></div></${tag}></article>`;
+  return `<article class="project-card accent-${project.color}${project.media === "abstract" ? " is-upcoming" : ""}" data-project-number="${number(project)}"><${tag} class="project-card-link"${launch ? "" : " " + details}>${visual}<div class="card-body"><div class="card-meta"><span>${h(project.status[lang])}</span><span>${number(project)} / ${total}</span></div><div class="card-title-row"><h4>${title}</h4>${launch ? "" : `<span class="card-arrow">${arrow}</span>`}</div><p class="card-line">${h(copy.line)}</p>${launchButton}<div class="card-foot"><span>${h(project.metric[lang])}</span>${viewLink}</div></div></${tag}></article>`;
 }
 
 function heroShowcase(lang) {
@@ -110,8 +120,24 @@ function detail(project, lang) {
 await fs.rm(outputRoot, { recursive: true, force: true });
 await fs.mkdir(outputRoot, { recursive: true });
 await fs.cp(path.join(sourceRoot, "assets"), path.join(outputRoot, "assets"), { recursive: true });
-await fs.cp(path.join(sourceRoot, "play"), path.join(outputRoot, "play"), { recursive: true });
-await fs.cp(path.join(sourceRoot, "lantern-studio"), path.join(outputRoot, "lantern-studio"), { recursive: true });
+const studioRoot = path.join(sourceRoot, "lantern-studio");
+const editorHtml = new Set(["index.html", "lantern-connect.html"]);
+await fs.cp(studioRoot, path.join(outputRoot, "lantern-studio"), {
+  recursive: true,
+  filter: (file) => !/\.html?$/i.test(file) || editorHtml.has(path.relative(studioRoot, file)),
+});
+const studioLaunch = site.projects.find(project => project.slug === "indie-games").actions.find(action => action.showOnCard);
+const formerPlayers = ["play/tideglass-observatory", "lantern-studio/games/velvet-cloak"];
+for (const folder of formerPlayers) {
+  const target = path.join(outputRoot, folder);
+  await fs.mkdir(target, { recursive: true });
+  for (const lang of ["en", "zh"]) {
+    const href = h(actionUrl(studioLaunch, lang));
+    const label = h(studioLaunch[lang]);
+    const page = `<!doctype html><html lang="${lang === "zh" ? "zh-Hans" : "en"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0; url=${href}"><link rel="canonical" href="${site.url}${href}"><title>${label}</title></head><body><p><a href="${href}">${label}</a></p></body></html>\n`;
+    await fs.writeFile(path.join(target, lang + ".html"), page, "utf8");
+  }
+}
 await fs.writeFile(path.join(outputRoot, ".nojekyll"), "");
 for (const lang of ["en", "zh"]) {
   const languageRoot = path.join(outputRoot, lang === "zh" ? "zh" : "");
