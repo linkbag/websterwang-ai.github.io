@@ -793,7 +793,7 @@ export const site = {
           "Edit project data and web code for finer control, then export a standalone HTML game that plays offline.",
         ],
         involvement:
-          "Open the studio and choose “Make your first game” to follow the beginner guide. You can create and export a game without an account. To try a finished game first, explore the four clues and two endings in Tideglass Observatory.",
+          "Open the studio and choose “Create a two-ending game” to write a choice and its consequences. You can create and export a game without an account. To try a finished game first, explore the four clues and two endings in Tideglass Observatory.",
         alt: "Lantern Studio’s room editor with the tide ledger selected on a map and its English and Chinese text fields alongside",
       },
       zh: {
@@ -808,7 +808,7 @@ export const site = {
           "同一套玩法可以分别填写中英文文案。无论玩家选择哪种语言，找到线索后都能触发相同的下一步。",
           "熟悉开发后可以细改工程数据和网页代码，再把游戏导出成离线可玩的独立 HTML 文件。",
         ],
-        involvement: "打开工作室，跟着「做出你的第一款游戏」开始创作。无需注册就可以制作、试玩和导出游戏。也可以先进《潮镜天文台》，调查四件物品，寻找两个不同的结局。",
+        involvement: "打开工作室，点击「制作双结局游戏」，写下玩家的第一个选择和两种结果。无需注册就可以制作、试玩和导出游戏。也可以先进《潮镜天文台》，调查四件物品，寻找两个不同的结局。",
         alt: "灯笼工作室房间编辑器，场景中的潮汐手记已被选中，右侧可以编辑其中英文名称和调查动作",
       },
     },
