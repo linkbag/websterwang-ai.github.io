@@ -779,7 +779,7 @@ export const site = {
           "The idea grew out of a conversation at an indie game meetup in China. I wanted someone with a story in mind to be able to build the first playable scene in their own language, even if they had never written code.",
         highlights: [
           "The beginner workspace guides you through writing a decision and two endings. Test both paths before you share.",
-          "Write a stage drama with changing roles, voiced clues and endings that remember the player’s choices. Other formats offer game maps, film editing and room puzzles.",
+          "Create a stage drama with illustrated witness cards, recorded dialogue and endings that remember a choice from the opening scene. Write one scene at a time or bring a longer script in from a spreadsheet.",
           "Switch to the professional workspace to edit source data, inspect build checks and export a standalone HTML game that plays offline.",
         ],
         involvement:
@@ -795,7 +795,7 @@ export const site = {
           "这个想法来自一次国内独立游戏聚会。我希望有故事想讲的人，即使从没写过代码，也能用自己熟悉的语言，亲手做出第一个能玩的场景。",
         highlights: [
           "新手模式会引导你写下一个决定和两个不同的结局。分享前，可以亲自走一遍每条路线。",
-          "互动短剧可以分幕换角、为证物配音，让玩家的选择在尾声得到回应。其他类型也能绘制地图、剪辑互动影像或布置房间谜题。",
+          "用互动短剧编写分幕故事，给证词卡片配上肖像和录音，让开场的选择在谢幕时得到回应。可以逐场写，也可以从电子表格分批导入长剧本。",
           "切换到专业模式，可直接修改工程源码、查看构建检查，并导出能离线运行的独立 HTML 游戏。",
         ],
         involvement: "打开灯笼工作室，点击「制作双结局游戏」，写下玩家面临的第一个决定。想做别的类型，可以点击「探索游戏类型」，从空白工程开始。制作、试玩和导出都无需注册。",
