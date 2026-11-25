@@ -774,12 +774,12 @@ export const site = {
         title: "Lantern Studio",
         line: "A browser-based game editor for creating visual novels, puzzles and small RPGs.",
         summary:
-          "Choose from eight game formats and build your first scene in English or Chinese. Write dialogue, design choices and playtest as you work. The editor saves your project in this browser. Download an editable backup to continue on another computer, or export a game to share.",
+          "Choose from nine game formats and build your first scene in English or Chinese. Write dialogue, design choices and playtest as you work. The editor saves your project in this browser. Download an editable backup to continue on another computer, or export a game to share.",
         purpose:
           "The idea grew out of a conversation at an indie game meetup in China. I wanted someone with a story in mind to be able to build the first playable scene in their own language, even if they had never written code.",
         highlights: [
           "The beginner workspace guides you through writing a decision and two endings. Test both paths before you share.",
-          "Build a branching story, lay out a map or place clues in a room. Give each project its own art, sound and bilingual text.",
+          "Write a stage drama with changing roles, voiced clues and endings that remember the player’s choices. Other formats offer game maps, film editing and room puzzles.",
           "Switch to the professional workspace to edit source data, inspect build checks and export a standalone HTML game that plays offline.",
         ],
         involvement:
@@ -790,12 +790,12 @@ export const site = {
         title: "灯笼工作室 · Lantern Studio",
         line: "一款在浏览器里创作视觉小说、解谜游戏和小型角色扮演游戏的编辑器。",
         summary:
-          "从八种游戏类型中选择一种，用中文或英文搭建第一个场景。你可以写对白、设计选项，随时试玩刚改好的内容。工程会保存在当前浏览器里，也可以下载备份，换台电脑接着做，或把做好的游戏导出分享。",
+          "从九种游戏类型中选择一种，用中文或英文搭建第一个场景。你可以写对白、设计选项，随时试玩刚改好的内容。工程会保存在当前浏览器里，也可以下载备份，换台电脑接着做，或把做好的游戏导出分享。",
         purpose:
           "这个想法来自一次国内独立游戏聚会。我希望有故事想讲的人，即使从没写过代码，也能用自己熟悉的语言，亲手做出第一个能玩的场景。",
         highlights: [
           "新手模式会引导你写下一个决定和两个不同的结局。分享前，可以亲自走一遍每条路线。",
-          "编排分支剧情、绘制探索地图，或在房间中布置线索，再为工程配上图像、声音和中英双语文案。",
+          "互动短剧可以分幕换角、为证物配音，让玩家的选择在尾声得到回应。其他类型也能绘制地图、剪辑互动影像或布置房间谜题。",
           "切换到专业模式，可直接修改工程源码、查看构建检查，并导出能离线运行的独立 HTML 游戏。",
         ],
         involvement: "打开灯笼工作室，点击「制作双结局游戏」，写下玩家面临的第一个决定。想做别的类型，可以点击「探索游戏类型」，从空白工程开始。制作、试玩和导出都无需注册。",
