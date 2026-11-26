@@ -45,3 +45,14 @@ Optimized copies of authentic application screenshots for the October 2026 portf
 The October 2026 set totals 1,076,412 bytes of WebP images from 7,903,704 bytes of source images, a 86.4% reduction.
 
 The Lantern Studio covers show the professional storyboard editor after opening a blank visual novel. The gallery shows the beginner writing form for a choice and two endings. Each screenshot was taken in a fresh English or Chinese session in the hosted editor at a 1400 × 790 viewport. The uncropped WebP exports and source hashes are recorded in `sources.json`.
+
+## Aperture AI copilot film
+
+The November 2026 film uses the public IDeate-Lung01 showcase in Aperture 2.1. The source detail is enlarged for legibility. The cohort diagram appears beside the original copilot table in the film frame. The remaining images are browser captures.
+
+| File | Pixels | Bytes | Source |
+| --- | --- | ---: | --- |
+| aperture-copilot-edit.webp | 1265 x 712 | 110,454 | Aperture 2.1 public showcase capture / Edit receipt |
+| aperture-copilot-cohorts.webp | 1265 x 712 | 46,238 | Aperture 2.1 copilot film frame / recorded answer table and illustrated patient counts |
+| aperture-copilot-source.webp | 1265 x 712 | 76,644 | Aperture 2.1 public showcase capture / IDeate-Lung01 readout and source passage |
+| aperture-copilot-brief.webp | 1265 x 712 | 70,380 | Aperture 2.1 public showcase capture / analyst-reviewed brief opened in exported HTML |

@@ -53,11 +53,11 @@ export const visuals = {
     }],
   },
   aperture: {
-    cover: bilingual(image("aperture-timeline")),
+    cover: bilingual(image("aperture-copilot-edit")),
     gallery: [
-      shot("aperture-home", "Start with a clinical research question.", "从一个临床研究问题开始。"),
-      shot("aperture-discovery", "Explore assets using public study records.", "从公开研究记录中梳理候选资产。"),
-      shot("aperture-relevance", "Review relevance and the supporting evidence.", "复核相关性，也追溯背后的证据。"),
+      shot("aperture-copilot-cohorts", "The copilot separates the full dose group from the second-line subset.", "AI 助手区分了整个剂量组和二线治疗亚组。"),
+      shot("aperture-copilot-source", "Inspect the study passage behind the reported response rate.", "核查缓解率对应的研究原文。"),
+      shot("aperture-copilot-brief", "The shared dashboard carries the analyst-reviewed brief and its study links.", "共享看板保留了复核后的简报和研究链接。"),
     ],
   },
   siteselection: {cover:bilingual(image("siteselection-demo"))},

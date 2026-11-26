@@ -389,6 +389,94 @@
       "source_bytes": 266656,
       "bytes": 37290,
       "sha256": "2568abe5d50c3df37c2f2e1dcd3bd011e7a1160477fdaac5d9602b25346a56b5"
+    },
+    {
+      "file": "aperture-copilot-edit.webp",
+      "source": "Aperture 2.1 public showcase capture / Edit receipt",
+      "source_sha256": "bac12fcfec6aae1c5063d1c1d368bb1cc46f42cd8f14dca95e95c7247ecc437f",
+      "source_dimensions": [
+        2304,
+        1350
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        2304,
+        1297
+      ],
+      "dimensions": [
+        1265,
+        712
+      ],
+      "source_bytes": 507090,
+      "bytes": 110454,
+      "sha256": "80506db45de76e0a5f12fcfae6c192836fe67f8742deb39043cc0a58d33b79ca"
+    },
+    {
+      "file": "aperture-copilot-cohorts.webp",
+      "source": "Aperture 2.1 copilot film frame / recorded answer table and illustrated patient counts",
+      "source_sha256": "33ab880793b55eaf1bbe53b998cc086d1a5eeed2edb0a4dad345a320f2629106",
+      "source_dimensions": [
+        1920,
+        1080
+      ],
+      "crop_ltrb": [
+        0,
+        0,
+        1920,
+        1081
+      ],
+      "dimensions": [
+        1265,
+        712
+      ],
+      "source_bytes": 148800,
+      "bytes": 46238,
+      "sha256": "a51d1c33ed62444bb895c27e004501af31d77dd58b46b094485514f820637326"
+    },
+    {
+      "file": "aperture-copilot-source.webp",
+      "source": "Aperture 2.1 public showcase capture / IDeate-Lung01 readout and source passage",
+      "source_sha256": "639d1dfa2319cf18e0e65c53cede644cfb76b57c3f4ce717d68e256e20930faa",
+      "source_dimensions": [
+        2304,
+        1350
+      ],
+      "crop_ltrb": [
+        1190,
+        70,
+        2288,
+        688
+      ],
+      "dimensions": [
+        1265,
+        712
+      ],
+      "source_bytes": 592587,
+      "bytes": 76644,
+      "sha256": "dff40d0131e3b5a46e0d0a700425b7403e06cdada7844f66f7b3b753dedc0a61"
+    },
+    {
+      "file": "aperture-copilot-brief.webp",
+      "source": "Aperture 2.1 public showcase capture / analyst-reviewed brief opened in exported HTML",
+      "source_sha256": "63adbe0b1076bbc01f41124cf77c24834067d1a1f7f7c4daa2a1e11788714570",
+      "source_dimensions": [
+        2304,
+        1350
+      ],
+      "crop_ltrb": [
+        360,
+        22,
+        1947,
+        916
+      ],
+      "dimensions": [
+        1265,
+        712
+      ],
+      "source_bytes": 284550,
+      "bytes": 70380,
+      "sha256": "3b4ea5d96116b15cc7fcd11c9e53e706e2c4c288a1ae6c5933ff27af04eb497d"
     }
   ]
 }
