@@ -1,5 +1,16 @@
-Music: "Simplicity" by Scott Buckley - released under CC BY 4.0.
+Aperture AI Copilot  |  Which number makes the brief?
+
+Recorded in Aperture 2.1 using the public ES-SCLC showcase. The film uses excerpts from live Ask and Edit interactions. The off-screen wait for the model has been shortened. The reviewed brief includes an analyst edit. Diagrams illustrate the reported patient counts.
+
+Study sources
+Rudin et al. Ifinatamab Deruxtecan in Patients With Extensive-Stage Small Cell Lung Cancer: Primary Analysis of the Phase II IDeate-Lung01 Trial. Journal of Clinical Oncology. PMID 41086386.
+https://pubmed.ncbi.nlm.nih.gov/41086386/
+IDeate-Lung01 sponsor cohort table at WCLC 2025, September 7, 2025.
+https://www.merck.com/news/ifinatamab-deruxtecan-demonstrated-clinically-meaningful-response-rates-in-patients-with-extensive-stage-small-cell-lung-cancer-in-ideate-lung01-phase-2-trial/
+
+English narration uses the Microsoft Andrew Multilingual neural voice.
+Music: "Simplicity" by Scott Buckley, used under CC BY 4.0.
 Artist: https://www.scottbuckley.com.au
 Track: https://www.scottbuckley.com.au/library/simplicity/
 License: https://creativecommons.org/licenses/by/4.0/
-Changes: excerpted, volume adjusted, ducked under narration, faded, and synchronized with this video.
+The track was excerpted, mixed under narration, faded and synchronized to the film.
